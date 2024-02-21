@@ -39,9 +39,9 @@ const TeamCard = ({ index, name, designation, image }) => (
 
 const Team = () => {
 	return (
-		<div className={`mt-12 bg-black-100 rounded-[20px] pb-5`}>
+		<div className={`mt-0 md:mt-12 bg-black-100 rounded-[20px] pb-5`}>
 			<div
-				className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+				className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[200px] md:min-h-[300px]`}
 			>
 				<motion.div variants={textVariant()}>
 					<p className={styles.sectionSubText}>meet the team</p>

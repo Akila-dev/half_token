@@ -109,7 +109,7 @@ const Navbar = () => {
 							{navLinks.map((nav) => (
 								<li
 									key={nav.id}
-									className={`font-poppins font-medium cursor-pointer text-[16px] ${
+									className={`font-poppins font-medium cursor-pointer text-[16px] hover:text-white ${
 										active === nav.title ? "text-[#f7931a]" : "text-secondary"
 									}`}
 									onClick={() => {

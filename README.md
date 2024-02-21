@@ -737,6 +737,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				"hero-pattern": "url('/src/assets/herobg.png')",
+				"hero-pattern2": "url('/src/assets/herobg.svg')",
 			},
 		},
 	},

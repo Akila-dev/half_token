@@ -30,9 +30,9 @@ const App = () => {
 				<Team />
 				{/* <Logos /> */}
 				{/* <div className="relative z-0">
-					<Contact />
 					<StarsCanvas />
 				</div> */}
+				<Contact />
 			</div>
 		</BrowserRouter>
 	);

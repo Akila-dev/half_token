@@ -2,7 +2,7 @@ import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas, EthereumCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
 import { styles } from "../styles";
@@ -42,6 +42,7 @@ const About = () => {
 				className="xl:flex-1 xl:h-screen md:h-[550px] h-[350px]"
 			>
 				<EarthCanvas />
+				{/* <EthereumCanvas /> */}
 			</motion.div>
 		</div>
 	);
