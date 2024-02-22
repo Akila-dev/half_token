@@ -162,7 +162,7 @@ const team = [
 	},
 ];
 
-const collapsible = [
+const ABOUT = [
 	{
 		title: "Section 1: Understanding Bitcoin Halving",
 		content: [
@@ -177,7 +177,7 @@ const collapsible = [
 			"Section 2: Introducing the HLVG Token",
 			"HLVG Token symbolizes the essence of the crypto halving phenomenon. As a tribute to these crucial events, it aligns with Ethereum’s versatility and Bitcoin’s legacy.",
 		],
-		listHeader: "Key Features",
+		listHeader: "Key Features:",
 		list: [
 			"Fixed Supply: A total of 21 million tokens, mirroring the iconic Bitcoin supply cap.",
 			"Deflationary Design: Incorporates a rigorous burning mechanism to reduce token supply over time, potentially enhancing its value.",
@@ -216,7 +216,7 @@ const collapsible = [
 		list: [],
 	},
 	{
-		title: "",
+		title: "Conclusion",
 		content: [
 			"The 2024 Bitcoin Halving is set to be a landmark event in the cryptocurrency world, and HLVG Token is your opportunity to be part of this exciting journey. As we count down to this historic moment, HLVG stands as a testament to the innovation and spirit of the crypto community.",
 		],
@@ -225,4 +225,4 @@ const collapsible = [
 	},
 ];
 
-export { tokenomics, LOGOS, roadmap, team };
+export { tokenomics, LOGOS, roadmap, team, ABOUT };

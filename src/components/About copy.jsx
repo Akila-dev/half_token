@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Tilt from "react-tilt";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { EarthCanvas, EthereumCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
@@ -11,60 +11,44 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const AboutSections = () => {
-	const [expanded, setExpanded] = useState(0);
-
+	const [openedSection, setOpenedSection] = useState(0);
 	return (
 		<div className="rounded-2xl space-y-1 max-w-[900px mx-auto">
 			{ABOUT.map((about, index) => (
-				<motion.div className="rounded-xl overflow-hidden">
-					<motion.button
+				<div className="rounded-xl overflow-hidden" key={index}>
+					<button
 						className="bg-black-100 p-4 md:px-8 md:py-6 rounded-xl relative block w-full text-left"
-						// animate={{ backgroundColor: isOpen ? "#FF0088" : "#0055FF" }}
-						onClick={() => setExpanded(index === expanded ? false : index)}
+						onClick={() => setOpenedSection(index)}
 					>
 						{about.title}
-					</motion.button>
+					</button>
 
-					<AnimatePresence initial={false}>
-						{index === expanded && (
-							<motion.section
-								key="content"
-								initial="collapsed"
-								animate="open"
-								exit="collapsed"
-								variants={{
-									open: { opacity: 1, height: "auto" },
-									collapsed: { opacity: 0, height: 0 },
-								}}
-								transition={{ duration: 0.1 }}
-								// transition={{ duration: 0.1, ease: [0.04, 0.62, 0.23, 0.98] }}
-								className="bg-[#1d1836] px-4 py-6 md:px-8 md:py-8 -mt-3 space-y-4"
-							>
-								{about.content.map((item, index) => (
-									<p key={index} className="text-[14px]">
-										{item}
-									</p>
-								))}
+					{index === openedSection && (
+						<div className="bg-[#1d1836] px-4 py-6 md:px-8 md:py-8 -mt-3 space-y-4">
+							{about.content.map((item, index) => (
+								<p key={index} className="text-[14px]">
+									{item}
+								</p>
+							))}
 
-								{about.listHeader && (
-									<h3 className="font-semibold text-[14px]">
-										{about.listHeader}
-									</h3>
-								)}
+							{about.listHeader && (
+								<h3 className="font-semibold text-[14px]">
+									{about.listHeader}
+								</h3>
+							)}
 
-								{about.list && (
-									<ul className="mt-7 list-disc ml-5 space-y-2">
-										{about.list.map((listItem, index) => (
-											<li key={index} className="text-[14px]">
-												{listItem}
-											</li>
-										))}
-									</ul>
-								)}
-							</motion.section>
-						)}
-					</AnimatePresence>
-				</motion.div>
+							{about.list && (
+								<ul className="mt-7 list-disc ml-5 space-y-2">
+									{about.list.map((listItem, index) => (
+										<li key={index} className="text-[14px]">
+											{listItem}
+										</li>
+									))}
+								</ul>
+							)}
+						</div>
+					)}
+				</div>
 			))}
 		</div>
 	);

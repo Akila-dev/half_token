@@ -32,10 +32,10 @@ const Contact = () => {
 
 			<motion.div
 				variants={slideIn("up", "tween", 0.2, 1)}
-				className="bg-black-100 px-5 py-10 lg:p-14 rounded-2xl bg-hero-pattern2 bg-bottom"
+				className="bg-black-100 px-5 py-10 md:p-14 rounded-2xl"
 			>
 				<div className="flex flex-row flex-wrap lg:flex-nowrap gap-10 w-full justify-between">
-					<div className="max-w-[350px] space-y-4">
+					<div className="lg:max-w-[350px] space-y-4">
 						<Link
 							to="/"
 							className="flex items-center gap-2"
@@ -53,6 +53,7 @@ const Contact = () => {
 							Get ready to witness a pivotal moment in the world of
 							cryptocurrency with the upcoming 2024 Bitcoin Halving.
 						</p>
+						{/* <p className="pt-5">© 2024 HALVING TOKEN. ALL RIGHTS RESERVED</p> */}
 					</div>
 
 					<div className="space-y-4">
@@ -110,6 +111,10 @@ const Contact = () => {
 							</a>
 						</div>
 					</div>
+				</div>
+
+				<div className="mt-10 pt-8 border-t border-secondary lg:text-center">
+					<p>© 2024 HALVING TOKEN. ALL RIGHTS RESERVED</p>
 				</div>
 			</motion.div>
 		</div>

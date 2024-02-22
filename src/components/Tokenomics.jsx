@@ -9,7 +9,11 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { FiCopy } from "react-icons/fi";
 
 const TokenomicsCard = ({ index, title, icon, value }) => (
-	<Tilt className={`xs:w-[250px] w-full ${index === 1 && "cursor-pointer"}`}>
+	<Tilt
+		className={`xs:w-[250px] md:w-[275px] lg:w-[250px] w-full ${
+			index === 1 && "cursor-pointer"
+		}`}
+	>
 		<motion.div
 			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
 			className="w-full green-orange-gradient p-[1px] rounded-[20px] shadow-card"
@@ -28,7 +32,7 @@ const TokenomicsCard = ({ index, title, icon, value }) => (
 					className="w-16 h-16 object-contain"
 				/>
 
-				<h3 className="text-white text-[20px] font-bold text-center">
+				<h3 className="text-white text-[20px] font-semibold text-center">
 					{title}
 				</h3>
 
@@ -51,15 +55,48 @@ const TokenomicsCard = ({ index, title, icon, value }) => (
 	</Tilt>
 );
 
+const TokenomicsStatsCard = ({ index, title, number }) => (
+	<Tilt className={`xs:w-[275px] w-full ${index === 1 && "cursor-pointer"}`}>
+		<motion.div
+			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+			className="w-full green-orange-gradient p-[1px] rounded-[20px] shadow-card"
+		>
+			<div
+				options={{
+					max: 45,
+					scale: 1,
+					speed: 450,
+				}}
+				className="bg-tertiary rounded-[20px] py-5 px-7 min-h-[200px] flex justify-evenly items-center flex-col"
+			>
+				{/* <div className="w-[90px] h-[90px] green-orange-gradient p-[2px] rounded-full shadow-card">
+					<div className="bg-tertiary h-full w-full rounded-full flex justify-evenly items-center"></div>
+				</div> */}
+
+				<h3 className="text-white text-[20px] font-semibold text-center">
+					{title}
+				</h3>
+
+				<h1 className="orange-text-gradient text-white text-5xl ">{number}</h1>
+			</div>
+		</motion.div>
+	</Tilt>
+);
+
 const About = () => {
 	return (
 		<div>
+			<div className="mb-10 md:mb-20 flex justify-center flex-wrap gap-10">
+				<TokenomicsStatsCard index={1} title="Tax Buy" number={3} />
+				<TokenomicsStatsCard index={2} title="Tax Sell" number={6} />
+			</div>
+
 			<motion.div variants={textVariant()}>
 				<p className={`${styles.sectionSubText} text-center`}>Tokenomics</p>
 				<h2 className={`${styles.sectionHeadText} text-center`}>Get $HLVG</h2>
 			</motion.div>
 
-			<div className="mt-20 flex justify-center flex-wrap gap-10">
+			<div className="mt-10 md:mt-20 flex justify-center flex-wrap gap-10">
 				{tokenomics.map((item, index) => (
 					<TokenomicsCard key={item.title} index={index} {...item} />
 				))}
