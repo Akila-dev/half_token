@@ -8,9 +8,7 @@ import { HeroCanvas } from "./canvas";
 
 const Hero = () => {
 	return (
-		<section
-			className={`relative w-full min-h-screen flex flex-col gap-7 items-center`}
-		>
+		<section className={`relative w-full flex flex-col gap-7 items-center`}>
 			<div className="flex- pt-[50px]">
 				<div className="flex flex-col gap-5 items-center text-center">
 					<h2 className={`${styles.heroHeadText}`}>
@@ -25,7 +23,7 @@ const Hero = () => {
 					</a>
 				</div>
 			</div>
-			<div className="w-full h-[60vh] flex-">
+			<div className="w-full h-[300px] md:h-[400px] lg:h-[70vh] flex-">
 				<HeroCanvas />
 			</div>
 		</section>
