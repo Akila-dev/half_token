@@ -7,7 +7,7 @@ import { menu, close } from "../assets";
 
 import { FaEthereum } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({ activeProp }) => {
 	const [active, setActive] = useState("");
 	const [toggle, setToggle] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
@@ -65,11 +65,12 @@ const Navbar = () => {
 				</Link>
 
 				<ul className="list-none hidden lg:flex flex-row gap-10">
-					{navLinks.map((nav) => (
+					{navLinks.map((nav, index) => (
 						<li
 							key={nav.id}
 							className={`${
-								active === nav.title ? "text-[#f7931a]" : "text-secondary"
+								// active === nav.title || activeProp === index
+								activeProp === index ? "text-[#f7931a]" : "text-secondary"
 							} hover:text-[#fff] text-[18px] font-medium cursor-pointer`}
 							onClick={() => setActive(nav.title)}
 						>
@@ -115,11 +116,11 @@ const Navbar = () => {
 						} p-6 bg-tertiary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
 					>
 						<ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-							{navLinks.map((nav) => (
+							{navLinks.map((nav, index) => (
 								<li
 									key={nav.id}
 									className={`font-poppins font-medium cursor-pointer text-[16px] hover:text-white ${
-										active === nav.title ? "text-[#f7931a]" : "text-secondary"
+										activeProp === index ? "text-[#f7931a]" : "text-secondary"
 									}`}
 									onClick={() => {
 										setToggle(!toggle);

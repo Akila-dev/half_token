@@ -1,4 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import {
 	About,
@@ -13,20 +15,55 @@ import {
 } from "./components";
 
 const App = () => {
+	const [section1Ref, section1InView] = useInView({ threshold: 0.1 });
+	const [section2Ref, section2InView] = useInView({ threshold: 0.1 });
+	const [section3Ref, section3InView] = useInView({ threshold: 0.1 });
+	const [section4Ref, section4InView] = useInView({ threshold: 0.1 });
+
+	const [activeNav, setActiveNav] = useState(9);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			section1InView
+				? setActiveNav(0)
+				: section2InView
+				? setActiveNav(1)
+				: section3InView
+				? setActiveNav(2)
+				: section4InView
+				? setActiveNav(3)
+				: setActiveNav(9);
+
+			console.log(activeNav);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [section1InView, section2InView, section3InView, section4InView]);
+
 	return (
 		<BrowserRouter>
 			<div className="relative z-0 bg-primary">
 				<StarsCanvas />
 				<div className="bg-hero-patter bg-cover bg-no-repeat bg-center">
-					<Navbar />
+					<Navbar activeProp={activeNav} />
 					<Hero />
 				</div>
 				<Countdown />
-				<About />
-				<Tokenomics />
-				<Roadmap />
-				<Team />
-				<Contact />
+				<div ref={section1Ref}>
+					<About />
+				</div>
+				<div ref={section2Ref}>
+					<Tokenomics />
+				</div>
+				<div ref={section3Ref} className="h-auto">
+					<Roadmap />
+					<Team />
+				</div>
+				<div ref={section4Ref}>
+					<Contact />
+				</div>
 			</div>
 		</BrowserRouter>
 	);
