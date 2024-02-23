@@ -69,10 +69,6 @@ const TokenomicsStatsCard = ({ index, title, number }) => (
 				}}
 				className="bg-tertiary rounded-[20px] py-5 px-7 min-h-[200px] flex justify-evenly items-center flex-col"
 			>
-				{/* <div className="w-[90px] h-[90px] green-orange-gradient p-[2px] rounded-full shadow-card">
-					<div className="bg-tertiary h-full w-full rounded-full flex justify-evenly items-center"></div>
-				</div> */}
-
 				<h3 className="text-white text-[20px] font-semibold text-center">
 					{title}
 				</h3>

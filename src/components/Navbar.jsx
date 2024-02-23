@@ -16,7 +16,7 @@ const Navbar = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollTop = window.scrollY;
-			if (scrollTop > 100) {
+			if (scrollTop > 30) {
 				setScrolled(true);
 			} else {
 				setScrolled(false);
@@ -90,14 +90,23 @@ const Navbar = () => {
 				</div>
 
 				<div className="lg:hidden flex flex-1 justify-end items-center">
-					<img
-						src={toggle ? close : menu}
-						alt="menu"
-						className={`object-contain ${
-							toggle ? "w-[20px] h-[20px]" : "w-[24px] h-[24px]"
-						}`}
-						onClick={() => setToggle(!toggle)}
-					/>
+					{toggle ? (
+						<button className="p-0" onClick={() => setToggle(false)}>
+							<img
+								src={close}
+								alt="menu"
+								className={`object-contain w-[20px] h-[20px]`}
+								onClick={() => addScaleCorrector("Hello")}
+							/>
+						</button>
+					) : (
+						<img
+							src={menu}
+							alt="menu"
+							className={`object-contain w-[24px] h-[24px]`}
+							onClick={() => setToggle(true)}
+						/>
+					)}
 
 					<div
 						ref={popupRef}

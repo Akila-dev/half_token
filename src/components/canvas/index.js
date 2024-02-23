@@ -1,13 +1,7 @@
 import EarthCanvas from "./Earth";
 import BallCanvas from "./Ball";
-import ComputersCanvas from "./Computers";
+import HeroCanvas from "./Hero";
 import StarsCanvas from "./Stars";
-import EthereumCanvas from "./Ethereum";
+import CoinCanvas from "./Coin";
 
-export {
-	EarthCanvas,
-	BallCanvas,
-	ComputersCanvas,
-	StarsCanvas,
-	EthereumCanvas,
-};
+export { EarthCanvas, BallCanvas, HeroCanvas, StarsCanvas, CoinCanvas };

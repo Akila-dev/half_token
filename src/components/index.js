@@ -1,8 +1,9 @@
 import {
 	EarthCanvas,
 	BallCanvas,
-	ComputersCanvas,
+	HeroCanvas,
 	StarsCanvas,
+	CoinCanvas,
 } from "./canvas";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
@@ -13,6 +14,7 @@ import Roadmap from "./Roadmap";
 import Team from "./Team";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import Countdown from "./Countdown";
 
 export {
 	Hero,
@@ -26,6 +28,8 @@ export {
 	CanvasLoader,
 	EarthCanvas,
 	BallCanvas,
-	ComputersCanvas,
+	HeroCanvas,
 	StarsCanvas,
+	Countdown,
+	CoinCanvas,
 };

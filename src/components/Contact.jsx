@@ -103,10 +103,10 @@ const Contact = () => {
 								href="https://www.dextools.io/app/en/pairs"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
-								<image
+								<img
 									src={dextools}
 									alt="dextools"
-									className="object-contain w-[35px] h-[35px]"
+									className="object-contain w-[22px] h-[22px]"
 								/>
 							</a>
 						</div>

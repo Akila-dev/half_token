@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tilt from "react-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { EarthCanvas, EthereumCanvas } from "./canvas";
+import { EarthCanvas, CoinCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
 import { ABOUT } from "../constants";
@@ -14,9 +14,9 @@ const AboutSections = () => {
 	const [expanded, setExpanded] = useState(0);
 
 	return (
-		<div className="rounded-2xl space-y-1 max-w-[900px mx-auto">
+		<div className="rounded-2xl space-y-1 mx-auto">
 			{ABOUT.map((about, index) => (
-				<motion.div className="rounded-xl overflow-hidden">
+				<motion.div key={index} className="rounded-xl overflow-hidden">
 					<motion.button
 						className="bg-black-100 p-4 md:px-8 md:py-6 rounded-xl relative block w-full text-left"
 						// animate={{ backgroundColor: isOpen ? "#FF0088" : "#0055FF" }}
@@ -104,11 +104,11 @@ const About = () => {
 					className="xl:flex-1 xl:h-screen md:h-[550px] h-[350px]"
 				>
 					<EarthCanvas />
-					{/* <EthereumCanvas /> */}
+					{/* <CoinCanvas /> */}
 				</motion.div>
 			</div>
 
-			<div>
+			<div className="pb-7 md:pb-0">
 				<AboutSections />
 			</div>
 		</div>

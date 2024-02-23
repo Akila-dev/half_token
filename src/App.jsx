@@ -9,6 +9,7 @@ import {
 	Navbar,
 	Tokenomics,
 	StarsCanvas,
+	Countdown,
 } from "./components";
 
 const App = () => {
@@ -20,18 +21,11 @@ const App = () => {
 					<Navbar />
 					<Hero />
 				</div>
+				<Countdown />
 				<About />
-				{/* <div className="relative z-0">
-					<About />
-					<StarsCanvas />
-				</div> */}
 				<Tokenomics />
 				<Roadmap />
 				<Team />
-				{/* <Logos /> */}
-				{/* <div className="relative z-0">
-					<StarsCanvas />
-				</div> */}
 				<Contact />
 			</div>
 		</BrowserRouter>
