@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Tilt from "react-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { EarthCanvas, CoinCanvas } from "./canvas";
+import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
 import { ABOUT } from "../constants";
@@ -104,7 +103,6 @@ const About = () => {
 					className="xl:flex-1 xl:h-screen md:h-[550px] h-[350px]"
 				>
 					<EarthCanvas />
-					{/* <CoinCanvas /> */}
 				</motion.div>
 			</div>
 

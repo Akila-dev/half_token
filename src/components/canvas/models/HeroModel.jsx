@@ -9,97 +9,64 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 const HeroModel = (props) => {
 	const group = useRef();
 	const { nodes, materials, animations } = useGLTF("/models/hero.glb");
-	const { actions, names } = useAnimations(animations, group);
-	console.log(names);
+	// const { actions } = useAnimations(animations, group);
 
-	useEffect(() => {
-		actions[names[0]].reset().fadeIn(0.5).play();
-	}, []);
+	// console.log(names);
+
+	// useEffect(() => {
+	// 	actions[names[0]].reset().fadeIn(0.5).play();
+	// }, []);
 
 	return (
 		<group ref={group} {...props} dispose={null}>
 			<group name="Scene">
-				<group name="kid" rotation={[Math.PI / 2, 0, 0]} scale={0.011}>
-					<group name="eye_L">
-						<group
-							name="eye_1"
-							position={[0.059, -0.246, -11.748]}
-							rotation={[0.135, -0.041, -0.1]}
-							scale={0.098}
-						/>
-					</group>
-					<group name="eye_L1" scale={-1}>
-						<group
-							name="eye_1001"
-							position={[0.059, -0.246, -11.748]}
-							rotation={[0.135, -0.041, -0.1]}
-							scale={0.098}
-						/>
-					</group>
-				</group>
-				<group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.001}>
-					<primitive object={nodes.P} />
-					<skinnedMesh
-						castShadow
-						name="body"
-						geometry={nodes.body.geometry}
-						material={materials["Material.002"]}
-						skeleton={nodes.body.skeleton}
-					/>
-					<skinnedMesh
-						castShadow
-						name="face"
-						geometry={nodes.face.geometry}
-						material={materials["Material.002"]}
-						skeleton={nodes.face.skeleton}
-					/>
-					<skinnedMesh
-						castShadow
-						name="h1"
-						geometry={nodes.h1.geometry}
-						material={materials["Material #15"]}
-						skeleton={nodes.h1.skeleton}
-					/>
-					<group name="leg">
-						<skinnedMesh
-							castShadow
-							name="Mesh003"
-							geometry={nodes.Mesh003.geometry}
-							material={materials["Material #15"]}
-							skeleton={nodes.Mesh003.skeleton}
-						/>
-						<skinnedMesh
-							castShadow
-							name="Mesh003_1"
-							geometry={nodes.Mesh003_1.geometry}
-							material={materials["Material #47"]}
-							skeleton={nodes.Mesh003_1.skeleton}
-						/>
-					</group>
-				</group>
 				<group
-					name="Dummy001001"
-					position={[159.522, -89.45, -39.635]}
-					rotation={[-1.449, 0.555, 0.877]}
-				/>
-				<mesh
-					name="b1"
-					castShadow
-					geometry={nodes.b1.geometry}
-					material={materials["Material #44"]}
-					position={[0.432, 0.097, 0.293]}
-					rotation={[1.352, -0.067, 0.493]}
-					scale={0.001}
-				/>
-				<mesh
-					name="b2"
-					castShadow
-					geometry={nodes.b2.geometry}
-					material={materials["Material #44"]}
-					position={[0.436, 0.089, 0.298]}
-					rotation={[1.34, -0.045, 0.492]}
-					scale={0.001}
-				/>
+					name="body001"
+					position={[0, -0.038, 0]}
+					rotation={[Math.PI / 2, 0, 0]}
+					scale={0.011}
+				>
+					<mesh
+						name="Mesh002"
+						geometry={nodes.Mesh002.geometry}
+						material={materials["Material #15.002"]}
+					/>
+					<mesh
+						name="Mesh002_1"
+						geometry={nodes.Mesh002_1.geometry}
+						material={materials["Material #47.002"]}
+					/>
+					<mesh
+						name="Mesh002_2"
+						geometry={nodes.Mesh002_2.geometry}
+						material={materials["Material #29.002"]}
+					/>
+					<mesh
+						name="Mesh002_3"
+						geometry={nodes.Mesh002_3.geometry}
+						material={materials["Material #16.002"]}
+					/>
+					<mesh
+						name="Mesh002_4"
+						geometry={nodes.Mesh002_4.geometry}
+						material={materials["Material #17.002"]}
+					/>
+					<mesh
+						name="Mesh002_5"
+						geometry={nodes.Mesh002_5.geometry}
+						material={materials["Material #41.002"]}
+					/>
+					<mesh
+						name="Mesh002_6"
+						geometry={nodes.Mesh002_6.geometry}
+						material={materials["Material #44.002"]}
+					/>
+					<mesh
+						name="Mesh002_7"
+						geometry={nodes.Mesh002_7.geometry}
+						material={materials["Material #60.002"]}
+					/>
+				</group>
 			</group>
 		</group>
 	);

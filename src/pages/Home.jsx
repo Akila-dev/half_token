@@ -42,7 +42,7 @@ const App = () => {
 	}, [section1InView, section2InView, section3InView, section4InView]);
 
 	return (
-		<div className="relative z-0 bg-primary overflow-x-hidden">
+		<div className="relative z-0 bg-primary w-full overflow-x-clip">
 			<StarsCanvas />
 			<div className="bg-hero-patter bg-cover bg-no-repeat bg-center">
 				<Navbar activeProp={activeNav} />

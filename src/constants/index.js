@@ -8,10 +8,6 @@ import {
 	coingecko,
 	etherscan,
 	git,
-	meta,
-	starbucks,
-	tesla,
-	shopify,
 	teammate1,
 	teammate2,
 	teammate3,
@@ -85,7 +81,6 @@ const roadmap = [
 	{
 		title: "Phase 1",
 		company_name: "Initialization Phase",
-		icon: starbucks,
 		iconBg: "#383E56",
 		date: "March 2020 - April 2021",
 		points: [
@@ -99,7 +94,6 @@ const roadmap = [
 	{
 		title: "Phase 2",
 		company_name: "Second Phase",
-		icon: tesla,
 		iconBg: "#383E56",
 		date: "Jan 2021 - Feb 2022",
 		points: [
@@ -114,7 +108,6 @@ const roadmap = [
 	{
 		title: "Phase 3",
 		company_name: "Third Phase",
-		icon: shopify,
 		iconBg: "#383E56",
 		date: "Jan 2022 - Jan 2023",
 		points: [
@@ -130,7 +123,6 @@ const roadmap = [
 	{
 		title: "Phase 4",
 		company_name: "Completion Phase",
-		icon: meta,
 		iconBg: "#383E56",
 		date: "Jan 2023 - Present",
 		points: [

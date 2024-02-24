@@ -17,11 +17,6 @@ import teammate1 from "./team/1.png";
 import teammate2 from "./team/2.png";
 import teammate3 from "./team/3.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
 export {
 	logo,
 	backend,
@@ -39,8 +34,4 @@ export {
 	teammate1,
 	teammate2,
 	teammate3,
-	meta,
-	shopify,
-	starbucks,
-	tesla,
 };

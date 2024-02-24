@@ -1,20 +1,12 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import HeroModel from "./models/HeroModel";
+import { OrbitControls, Preload } from "@react-three/drei";
+import HeroModel from "./models/HeroModel.jsx";
 import CanvasLoader from "../Loader";
 
 const HeroCanvas = () => {
 	return (
-		<Canvas
-			shadows
-			camera={{ position: [1, 0, 2.5], fov: 50 }}
-			// frameloop="demand"
-			// shadows
-			// dpr={[1, 2]}
-			// camera={{ position: [20, 3, 5], fov: 25 }}
-			// gl={{ preserveDrawingBuffer: true }}
-		>
+		<Canvas shadows camera={{ position: [1, 0, 2.5], fov: 50 }}>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls enableZoom={false} enabled={false} />
 
@@ -26,9 +18,9 @@ const HeroCanvas = () => {
 					shadow-mapSize-height={1024}
 				/>
 
-				<group position={[0.2, -0.5, 1]} rotation={[-0, 0.5, 0]}>
-					{/* <HeroModel /> */}
-				</group>
+				{/* <group position={[0.2, -0.5, 1]} rotation={[-0, 0.5, 0]}>
+					<HeroModel />
+				</group> */}
 
 				<mesh
 					rotation={[-0.5 * Math.PI, 0, 0]}
