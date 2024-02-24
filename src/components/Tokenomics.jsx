@@ -56,7 +56,7 @@ const TokenomicsCard = ({ index, title, icon, value }) => (
 );
 
 const TokenomicsStatsCard = ({ index, title, number }) => (
-	<Tilt className={`xs:w-[275px] w-full ${index === 1 && "cursor-pointer"}`}>
+	<Tilt className={`xs:w-[275px] w-full`}>
 		<motion.div
 			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
 			className="w-full green-orange-gradient p-[1px] rounded-[20px] shadow-card"
