@@ -2,17 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import {
-	About,
-	Contact,
-	Roadmap,
-	Team,
-	Hero,
-	Navbar,
-	Tokenomics,
-	StarsCanvas,
-	Countdown,
-} from "./components";
+import Home from "./pages/Home";
 
 const App = () => {
 	const [section1Ref, section1InView] = useInView({ threshold: 0.1 });
@@ -44,27 +34,7 @@ const App = () => {
 
 	return (
 		<BrowserRouter>
-			<div className="relative z-0 bg-primary">
-				<StarsCanvas />
-				<div className="bg-hero-patter bg-cover bg-no-repeat bg-center">
-					<Navbar activeProp={activeNav} />
-					<Hero />
-				</div>
-				<Countdown />
-				<div ref={section1Ref}>
-					<About />
-				</div>
-				<div ref={section2Ref}>
-					<Tokenomics />
-				</div>
-				<div ref={section3Ref} className="h-auto">
-					<Roadmap />
-					<Team />
-				</div>
-				<div ref={section4Ref}>
-					<Contact />
-				</div>
-			</div>
+			<Home />
 		</BrowserRouter>
 	);
 };

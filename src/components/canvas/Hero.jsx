@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import HeroModel from "./models/HeroModel";
 import CanvasLoader from "../Loader";
 
-const ComputersCanvas = () => {
+const HeroCanvas = () => {
 	return (
 		<Canvas
 			shadows
@@ -27,7 +27,7 @@ const ComputersCanvas = () => {
 				/>
 
 				<group position={[0.2, -0.5, 1]} rotation={[-0, 0.5, 0]}>
-					<HeroModel />
+					{/* <HeroModel /> */}
 				</group>
 
 				<mesh
@@ -45,4 +45,4 @@ const ComputersCanvas = () => {
 	);
 };
 
-export default ComputersCanvas;
+export default HeroCanvas;
