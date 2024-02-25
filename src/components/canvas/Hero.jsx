@@ -31,10 +31,11 @@ const Hero = () => {
 				ref={group}
 				object={nodes["body001"]}
 				castShadow
-				scale={0.07}
-				position-y={-0.7}
-				position-x={-0.05}
+				scale={0.08}
+				position-y={-0.8}
+				position-x={-0.15}
 				rotation-y={0}
+				rotation-z={0}
 			/>
 			{/* <meshBasicMaterial map={texture} /> */}
 		</group>
@@ -52,7 +53,7 @@ const HeroCanvas = () => {
 				fov: 45,
 				near: 0.1,
 				far: 200,
-				position: [1, 0, 2.5],
+				position: [1, -0.3, 2.5],
 			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
@@ -62,7 +63,7 @@ const HeroCanvas = () => {
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
 				/> */}
-				<ambientLight />
+				<ambientLight intensity={0.5} />
 				<directionalLight
 					position={[-5, 5, 5]}
 					castShadow
