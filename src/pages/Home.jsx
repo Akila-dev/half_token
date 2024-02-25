@@ -41,9 +41,9 @@ const App = () => {
 
 	return (
 		<div className="relative z-0 bg-primary">
-			<div className="-z-10 fixed h-screen w-full">
+			{/* <div className="-z-10 fixed h-screen w-full">
 			<StarsCanvas />
-			</div>
+			</div> */}
 			<div className="bg-hero-patter bg-cover bg-no-repeat bg-center">
 				<Navbar activeProp={activeNav} />
 				<Hero />
