@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas, CoinCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
 import { ABOUT } from "../constants";
@@ -73,7 +73,7 @@ const About = () => {
 	return (
 		<div className="space-y-10 xl:space-y-0">
 			<div
-				className={`xl:mt-0 flex xl:flex-row xl:items-center flex-col-reverse gap-10 overflow-hidden min-h-screen`}
+				className={`xl:mt-0 flex xl:flex-row xl:items-center flex-col-reverse gap-4 md:gap-7 lg:gap-10 overflow-hidden`}
 			>
 				<motion.div
 					variants={slideIn("left", "tween", 0.2, 1)}
@@ -100,9 +100,10 @@ const About = () => {
 
 				<motion.div
 					variants={slideIn("right", "tween", 0.2, 1)}
-					className="xl:flex-1 xl:h-screen md:h-[550px] h-[350px]"
+					className="xl:flex-1 xl:h-screen xl:max-h-[680px] md:h-[550px] h-[300px] overflow-visible"
 				>
-					<EarthCanvas />
+					{/* <EarthCanvas /> */}
+					<CoinCanvas />
 				</motion.div>
 			</div>
 
