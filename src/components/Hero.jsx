@@ -23,7 +23,7 @@ const Hero = () => {
 					</a>
 				</div>
 			</div>
-			<div className="w-full h-[300px] md:h-[400px] lg:h-[450px] flex-">
+			<div className="w-full h-[350px] md:h-[400px] lg:h-[450px] flex-">
 				<HeroCanvas />
 			</div>
 		</section>

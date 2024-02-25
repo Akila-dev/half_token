@@ -1,46 +1,43 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, useTexture } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
 const Hero = () => {
-	const hero = useLoader(GLTFLoader, "/models/kid.glb");
+	// const hero = useLoader(GLTFLoader, "/models/kid.glb");
 
-	let mixer;
-	if (hero.animations.length) {
-		mixer = new THREE.AnimationMixer(hero.scene);
-		hero.animations.forEach((clip) => {
-			const action = mixer.clipAction(clip);
-			action.play();
-		});
-	}
+	const [mixer] = useState(() => new THREE.AnimationMixer());
 
-	useFrame((state, delta) => {
-		mixer?.update(delta);
-	});
+	const group = useRef();
+	const actions = useRef();
+	const model = useGLTF("/models/kid.glb");
+	const { nodes, scene, materials, animations } = model;
 
+	useFrame((state, delta) => mixer.update(delta));
 	useEffect(() => {
-		hero.scene.traverse((child) => {
-			if (child.isMesh) {
-				child.castShadow = true;
-				child.receiveShadow = true;
-				child.material.side = THREE.FrontSide;
-			}
-		});
+		actions.current = { idle: mixer.clipAction(animations[0], group.current) };
+		actions.current.idle.play();
+		return () => animations.forEach((clip) => mixer.uncacheClip(clip));
 	}, []);
 
+	const texture = useTexture("/textures/kid2.jpg");
+
 	return (
-		<primitive
-			castShadow
-			object={hero.scene}
-			scale={6.3}
-			position-y={-0.5}
-			position-x={0.05}
-			rotation-y={0}
-		/>
+		<group ref={group} dispose={null}>
+			<primitive
+				ref={group}
+				object={nodes["body001"]}
+				castShadow
+				scale={0.07}
+				position-y={-0.7}
+				position-x={-0.05}
+				rotation-y={0}
+			/>
+			{/* <meshBasicMaterial map={texture} /> */}
+		</group>
 	);
 };
 
@@ -76,7 +73,7 @@ const HeroCanvas = () => {
 				<Hero />
 				<mesh
 					rotation={[-0.5 * Math.PI, 0, 0]}
-					position={[0, -0.5, 0]}
+					position={[-0.05, -0.7, 0]}
 					receiveShadow
 				>
 					<planeGeometry args={[10, 10, 1, 1]} />
