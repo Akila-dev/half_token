@@ -6,12 +6,12 @@ import CanvasLoader from "../Loader";
 
 const Coin = () => {
 	// const earth = useGLTF("/models/coin.glb");
-	const earth = useGLTF("/models/coin.glb");
+	const coin = useGLTF("/models/coin.glb");
 
 	return (
 		<primitive
 			castShadow
-			object={earth.scene}
+			object={coin.scene}
 			scale={2.3}
 			position-y={-0.2}
 			position-x={0.05}
