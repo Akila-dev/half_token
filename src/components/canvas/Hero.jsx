@@ -17,16 +17,19 @@ const Hero = () => {
 	}, [mixer]);
 
 	return (
+		<group ref={group} dispose={null}>
+
 		<primitive
 			ref={group}
 			object={scene}
-			// dispose={null}
+			dispose={null}
 			castShadow
 			scale={8}
 			position-y={-0.5}
 			position-x={-0.15}
 			rotation-y={0}
 		/>
+		</group>
 	);
 };
 
