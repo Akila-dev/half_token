@@ -24,7 +24,7 @@ const Hero = () => {
 			object={scene}
 			dispose={null}
 			castShadow
-			scale={8}
+			scale={7.5}
 			position-y={-0.5}
 			position-x={-0.15}
 			rotation-y={0}
