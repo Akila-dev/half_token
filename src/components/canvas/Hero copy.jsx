@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Preload, useGLTF, useAnimations } from "@react-three/drei";
+import { Preload, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
@@ -8,25 +8,33 @@ import CanvasLoader from "../Loader";
 const Hero = () => {
 	// const hero = useLoader(GLTFLoader, "/models/kid.glb");
 
-	const group = useRef();
-	const { scene, animations } = useGLTF("/models/kid.glb");
-	const { actions, mixer } = useAnimations(animations, group);
+	const [mixer] = useState(() => new THREE.AnimationMixer());
 
+	const group = useRef();
+	const actions = useRef();
+	const model = useGLTF("/models/kid.glb");
+	const { nodes, scene, materials, animations } = model;
+	console.log(animations);
+
+	useFrame((state, delta) => mixer.update(delta));
 	useEffect(() => {
-		actions.Animation.play();
-	}, [mixer]);
+		actions.current = { idle: mixer.clipAction(animations[0], group.current) };
+		actions.current.idle.play();
+		return () => animations.forEach((clip) => mixer.uncacheClip(clip));
+	}, []);
 
 	return (
-		<primitive
-			ref={group}
-			object={scene}
-			// dispose={null}
-			castShadow
-			scale={8}
-			position-y={-0.5}
-			position-x={-0.15}
-			rotation-y={0}
-		/>
+		<group ref={group} dispose={null}>
+			<primitive
+				ref={group}
+				object={nodes["body001"]}
+				castShadow
+				scale={0.08}
+				position-y={-0.8}
+				position-x={-0.15}
+				rotation-y={0}
+			/>
+		</group>
 	);
 };
 

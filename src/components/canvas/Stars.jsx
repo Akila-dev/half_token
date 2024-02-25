@@ -39,9 +39,8 @@ const StarsCanvas = () => {
 	return (
 		<div className="w-full h-screen fixed top-0 left-0 inset-0 z-[-1]">
 			<Canvas camera={{ position: [0, 0, 1] }}>
-				<Suspense fallback={null}>
-					<Stars />
-				</Suspense>
+				<Stars />
+				<Suspense fallback={null}></Suspense>
 
 				<Preload all />
 			</Canvas>
