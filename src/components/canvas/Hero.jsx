@@ -1,6 +1,11 @@
 import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Preload, useGLTF, useAnimations } from "@react-three/drei";
+import {
+	Preload,
+	useGLTF,
+	useAnimations,
+	OrbitControls,
+} from "@react-three/drei";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
@@ -18,17 +23,16 @@ const Hero = () => {
 
 	return (
 		<group ref={group} dispose={null}>
-
-		<primitive
-			ref={group}
-			object={scene}
-			dispose={null}
-			castShadow
-			scale={7.5}
-			position-y={-0.5}
-			position-x={-0.15}
-			rotation-y={0}
-		/>
+			<primitive
+				ref={group}
+				object={scene}
+				dispose={null}
+				castShadow
+				scale={7.5}
+				position-y={-0.5}
+				position-x={-0.28}
+				rotation-y={0.5}
+			/>
 		</group>
 	);
 };
@@ -48,28 +52,29 @@ const HeroCanvas = () => {
 			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				{/* <OrbitControls
-					autoRotate={false}
+				<OrbitControls
+					autoRotate
 					enableZoom={false}
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
-				/> */}
-				<ambientLight intensity={0.5} />
+				/>
+				<ambientLight intensity={0.1} />
 				<directionalLight
 					position={[-5, 5, 5]}
 					castShadow
 					shadow-mapSize-width={1024}
 					shadow-mapSize-height={1024}
+					intensity={0.1}
 				/>
 
 				<Hero />
 				<mesh
 					rotation={[-0.5 * Math.PI, 0, 0]}
-					position={[-0.05, -0.7, 0]}
+					position={[-0.28, -0.5, 0]}
 					receiveShadow
 				>
 					<planeGeometry args={[10, 10, 1, 1]} />
-					<shadowMaterial transparent opacity={0.2} />
+					<shadowMaterial transparent opacity={0.5} />
 				</mesh>
 
 				<Preload all />
