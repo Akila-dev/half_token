@@ -42,6 +42,7 @@ const StarsCanvas = () => {
 		<div className="w-full h-screen fixed top-0 left-0 inset-0 z-[-1] bg-primary">
 			<Canvas
 				camera={{ position: [0, 0, 1] }}
+				frameloop="demand"
 				dpr={[1, 2]}
 				gl={{ preserveDrawingBuffer: true }}
 			>
