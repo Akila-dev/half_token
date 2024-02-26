@@ -11,13 +11,13 @@ import Logos from "./Logos";
 const TeamCard = ({ index, name, designation, image }) => (
 	<motion.div
 		variants={fadeIn("", "spring", index * 0.5, 0.75)}
-		className="bg-black-200 p-10 rounded-3xl lg:max-w-[48%] xl:max-w-[320px] w-full"
+		className="bg-black-200 p-10 rounded-3xl xl:max-w-[320px] w-full col-span-1"
 	>
 		<div className="mt-1 w-full">
 			<img
 				src={image}
 				alt="project_image"
-				className="w-full h-full md:h-[250px] object-cover object-top rounded-2xl"
+				className="w-full h-full md:h-[200px] xl:h-[250px] object-cover object-top rounded-2xl"
 			/>
 			<div className="mt-7 flex justify-between items-center gap-1">
 				<div className="flex-1 flex flex-col">
@@ -43,7 +43,7 @@ const Team = () => {
 				</motion.div>
 			</div>
 			<div
-				className={`-mt-20 pb-0 md:pb-0 ${styles.paddingX} flex flex-wrap gap-7`}
+				className={`-mt-20 pb-0 md:pb-0 ${styles.paddingX} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7`}
 			>
 				{team.map((teammate, index) => (
 					<TeamCard key={teammate.name} index={index} {...teammate} />
