@@ -1,5 +1,6 @@
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { StarsCanvas } from "./components";
+// import { StarsCanvas } from "./components";
 
 import Home from "./pages/Home";
 
