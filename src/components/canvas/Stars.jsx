@@ -1,6 +1,11 @@
 import React, { useState, useRef, Suspense, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
+import {
+	Points,
+	PointMaterial,
+	Preload,
+	OrbitControls,
+} from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
@@ -43,6 +48,12 @@ const StarsCanvas = () => {
 				dpr={[1, 2]}
 				gl={{ preserveDrawingBuffer: true }}
 			>
+				<OrbitControls
+					autoRotate
+					enableZoom={false}
+					maxPolarAngle={Math.PI / 2}
+					minPolarAngle={Math.PI / 2}
+				/>
 				<Suspense fallback={null}>
 					<Stars />
 				</Suspense>
