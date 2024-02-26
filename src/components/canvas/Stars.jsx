@@ -1,16 +1,19 @@
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, Suspense, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
-import * as THREE from "three";
 
 const Stars = (props) => {
 	const ref = useRef();
-	const [sphere] = useState(() =>
-		random.inSphere(new Float32Array(3000), { radius: 1.2 })
-	);
+	// const [sphere] = useState(() =>
+	// 	random.inSphere(new Float32Array(3000), { radius: 1.2 })
+	// );
+	const [sphere, setSphere] = useState(null);
 
-	// console.log(sphere);
+	useEffect(() => {
+		setSphere(() => random.inSphere(new Float32Array(3000), { radius: 1.2 }));
+		console.log(sphere);
+	}, []);
 
 	useFrame((state, delta) => {
 		ref.current.rotation.x -= delta / 10;
