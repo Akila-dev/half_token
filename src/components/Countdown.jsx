@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { SectionWrapper } from "../hoc";
 
-const COUNTDOWN_TARGET = new Date("2024-03-31T07:29:59");
+const COUNTDOWN_TARGET = new Date("2024-04-21T07:40:42");
 
 const getTimeLeft = () => {
 	const totalTimeLeft = COUNTDOWN_TARGET - new Date();

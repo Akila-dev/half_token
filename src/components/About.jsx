@@ -82,7 +82,7 @@ const About = () => {
 					<motion.div variants={textVariant()}>
 						<p className={styles.sectionSubText}>About</p>
 						<h2 className={styles.sectionHeadText}>
-							A New Era in Cryptocurrency Begins
+							A Revolutionary Chapter in Cryptocurrency Unfolds
 						</h2>
 					</motion.div>
 
@@ -90,11 +90,11 @@ const About = () => {
 						variants={fadeIn("", "", 0.1, 1)}
 						className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
 					>
-						Get ready to witness a pivotal moment in the world of cryptocurrency
-						with the upcoming 2024 Bitcoin Halving. Introducing HLVG Token – a
-						unique digital asset designed to celebrate this monumental event.
-						It’s more than just a token; it’s your gateway to being part of
-						crypto history.
+						Prepare to be part of a defining moment in cryptocurrency with the
+						2024 Bitcoin Halving on the horizon. We proudly present the HALVING
+						Token – a distinctive digital asset crafted to commemorate this
+						significant occasion. It represents more than a mere token; it's an
+						invitation to be a part of cryptocurrency history.
 					</motion.p>
 				</motion.div>
 

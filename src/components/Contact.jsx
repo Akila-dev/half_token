@@ -22,11 +22,13 @@ const Contact = () => {
 				className="flex flex-col items-center"
 			>
 				<p className={`${styles.sectionSubText} text-center`}>Disclaimer</p>
-				<h2 className={`${styles.sectionHeadText} text-center`}>Disclaimer</h2>
+				<h2 className={`${styles.sectionHeadText} text-center`}>
+					Risk Advisory
+				</h2>
 				<p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center">
-					Purchasing digital assets carries inherent risks, which can range up
-					to total loss. Any potential investor should conduct their own
-					research before making any financial decisions.
+					Investing in digital assets involves inherent risks, potentially
+					leading to total loss. Prospective investors are advised to conduct
+					thorough research prior to any financial undertakings.
 				</p>
 			</motion.div>
 
@@ -50,8 +52,8 @@ const Contact = () => {
 							</p>
 						</Link>
 						<p>
-							Get ready to witness a pivotal moment in the world of
-							cryptocurrency with the upcoming 2024 Bitcoin Halving.
+							Embrace the upcoming 2024 Bitcoin Halving—a pivotal moment in the
+							cryptocurrency landscape.
 						</p>
 						{/* <p className="pt-5">© 2024 HALVING TOKEN. ALL RIGHTS RESERVED</p> */}
 					</div>
@@ -83,24 +85,24 @@ const Contact = () => {
 								href="mailto: Contact@halvingtoken.xyz"
 							>
 								<SiMaildotru className="text-[18px] inline-block .orange-text-gradient text-brand" />{" "}
-								Contact@halvingtoken.xyz
+								Contact@halvingtoken.com
 							</a>
 						</div>
 						<div className="flex gap-3">
 							<a
-								href="https://t.me/Halving_Eth"
+								href="https://t.me/HalvingPortal"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<FaTelegramPlane />
 							</a>
 							<a
-								href="http://x.com/halving_eth"
+								href="https://twitter.com/TokenHalving"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<BsTwitterX />
 							</a>
 							<a
-								href="https://www.dextools.io/app/en/pairs"
+								href="https://www.dextools.io"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<img
@@ -108,6 +110,14 @@ const Contact = () => {
 									alt="dextools"
 									className="object-contain w-[22px] h-[22px]"
 								/>
+							</a>
+						</div>
+						<div>
+							<a
+								className="text-secondary hover:text-brand"
+								href="mailto: Contact@halvingtoken.xyz"
+							>
+								CA:TBA
 							</a>
 						</div>
 					</div>

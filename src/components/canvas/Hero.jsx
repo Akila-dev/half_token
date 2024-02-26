@@ -52,12 +52,12 @@ const HeroCanvas = () => {
 			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				{/* <OrbitControls
-					autoRotate
+				<OrbitControls
+					autoRotate={false}
 					enableZoom={false}
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
-				/> */}
+				/>
 				<ambientLight intensity={0.1} />
 				<directionalLight
 					position={[-5, 5, 5]}

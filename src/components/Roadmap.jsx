@@ -20,7 +20,7 @@ const RoadmapCard = ({ activity, id }) => {
 				color: "#fff",
 			}}
 			contentArrowStyle={{ borderRight: "8px solid  #1d1836" }}
-			date={"Half Token Phase " + id}
+			date={"Phase " + id + ": " + activity.subheading}
 			iconStyle={{ background: activity.iconBg }}
 			icon={
 				<div className="flex justify-center items-center w-full h-full">
@@ -38,7 +38,7 @@ const RoadmapCard = ({ activity, id }) => {
 					className="text-secondary text-[16px] font-medium"
 					style={{ margin: 0 }}
 				>
-					{activity.company_name}
+					{activity.subheading}
 				</p>
 			</div>
 

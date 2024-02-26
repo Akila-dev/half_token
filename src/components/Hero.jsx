@@ -12,13 +12,13 @@ const Hero = () => {
 			<div className="flex- pt-[50px]">
 				<div className="flex flex-col gap-5 items-center text-center">
 					<h2 className={`${styles.heroHeadText}`}>
-						HLVG Token: Embrace the Bitcoin Halving Wave of 2024
+						HALVING Token: Harness the Momentum of the 2024 Bitcoin Halving Wave
 					</h2>
 					{/* <h1>$HLVG</h1> */}
 					<p className={`${styles.heroSubText}`}>
-						A New Era in Cryptocurrency Begins
+						A Revolutionary Chapter in Cryptocurrency Unfolds
 					</p>
-					<a href="https://t.me/Halving_Eth" className="button">
+					<a href="https://t.me/HalvingPortal" className="button">
 						<FaTelegramPlane /> Join Telegram
 					</a>
 				</div>

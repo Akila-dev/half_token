@@ -39,7 +39,7 @@ const Team = () => {
 			>
 				<motion.div variants={textVariant()}>
 					<p className={styles.sectionSubText}>meet the team</p>
-					<h2 className={styles.sectionHeadText}>Our Team</h2>
+					<h2 className={styles.sectionHeadText}>Our Visionaries</h2>
 				</motion.div>
 			</div>
 			<div
