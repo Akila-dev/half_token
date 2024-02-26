@@ -8,7 +8,7 @@ import CanvasLoader from "../Loader";
 const Stars = (props) => {
 	const ref = useRef();
 	const [sphere] = useState(() =>
-		random.inSphere(new Float32Array(2500), { radius: 1.2 })
+		random.inSphere(new Float32Array(5000), { radius: 1.2 })
 	);
 
 	useFrame((state, delta) => {
@@ -17,14 +17,8 @@ const Stars = (props) => {
 	});
 
 	return (
-		<group ref={ref} rotation={[0, 0, Math.PI / 4]}>
-			<Points
-				ref={ref}
-				positions={sphere ? sphere : 0}
-				stride={3}
-				frustumCulled
-				{...props}
-			>
+		<group rotation={[0, 0, Math.PI / 4]}>
+			<Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
 				<PointMaterial
 					transparent
 					color="#f272c8"
@@ -42,7 +36,6 @@ const StarsCanvas = () => {
 		<div className="w-full h-screen fixed top-0 left-0 inset-0 z-[-1] bg-primary">
 			<Canvas
 				camera={{ position: [0, 0, 1] }}
-				frameloop="demand"
 				dpr={[1, 2]}
 				gl={{ preserveDrawingBuffer: true }}
 			>
