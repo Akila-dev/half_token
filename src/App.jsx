@@ -8,9 +8,9 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<div>
-				<div className="z-10 fixed left-0 top-0 w-full h-screen">
+				{/* <div className="z-10 fixed left-0 top-0 w-full h-screen">
 					<StarsCanvas />
-				</div>
+				</div> */}
 
 				<div className="z-[10000000] relative">
 					<Home />
