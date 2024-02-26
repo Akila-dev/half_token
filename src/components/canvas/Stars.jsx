@@ -43,11 +43,7 @@ const Stars = (props) => {
 const StarsCanvas = () => {
 	return (
 		<div className="w-full h-screen fixed top-0 left-0 inset-0 z-[-1] bg-primary">
-			<Canvas
-				camera={{ position: [0, 0, 1] }}
-				dpr={[1, 2]}
-				gl={{ preserveDrawingBuffer: true }}
-			>
+			<Canvas camera={{ position: [0, 0, 1] }}>
 				<OrbitControls
 					autoRotate
 					enableZoom={false}
