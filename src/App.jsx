@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div>
+			<div className="scroll-smooth">
 				<div className="hidden lg:block z-10 fixed left-0 top-0 w-full h-screen">
 					<StarsCanvas />
 				</div>
