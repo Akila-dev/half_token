@@ -29,7 +29,7 @@ const Hero = () => {
 				dispose={null}
 				castShadow
 				scale={7.5}
-				position-y={-0.5}
+				position-y={-0.65}
 				position-x={-0.28}
 				rotation-y={0.5}
 			/>
@@ -41,7 +41,7 @@ const HeroCanvas = () => {
 	return (
 		<Canvas
 			shadows
-			frameloop="demand"
+			// frameloop="demand"
 			dpr={[1, 2]}
 			gl={{ preserveDrawingBuffer: true }}
 			camera={{
@@ -52,12 +52,12 @@ const HeroCanvas = () => {
 			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				<OrbitControls
+				{/* <OrbitControls
 					autoRotate
 					enableZoom={false}
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
-				/>
+				/> */}
 				<ambientLight intensity={0.1} />
 				<directionalLight
 					position={[-5, 5, 5]}
