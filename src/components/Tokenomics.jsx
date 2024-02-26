@@ -83,8 +83,8 @@ const About = () => {
 	return (
 		<div>
 			<div className="mb-10 md:mb-20 flex justify-center flex-wrap gap-10">
-				<TokenomicsStatsCard index={1} title="Tax Buy" number={3} />
-				<TokenomicsStatsCard index={2} title="Tax Sell" number={6} />
+				<TokenomicsStatsCard index={1} title="Tax Buy" number={0} />
+				<TokenomicsStatsCard index={2} title="Tax Sell" number={0} />
 			</div>
 
 			<motion.div variants={textVariant()}>
