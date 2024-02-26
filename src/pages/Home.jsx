@@ -9,7 +9,7 @@ import {
 	Hero,
 	Navbar,
 	Tokenomics,
-	StarsCanvas,
+	// StarsCanvas,
 	Countdown,
 } from "../components";
 
@@ -40,8 +40,8 @@ const App = () => {
 	}, [section1InView, section2InView, section3InView, section4InView]);
 
 	return (
-		<div className="relative z-0 bg-primary">
-			<StarsCanvas />
+		<div className="relative z-0 bg-primar">
+			{/* <StarsCanvas /> */}
 			<div className="bg-hero-patter bg-cover bg-no-repeat bg-center">
 				<Navbar activeProp={activeNav} />
 				<Hero />
