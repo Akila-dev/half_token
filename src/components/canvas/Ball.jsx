@@ -1,12 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-	Decal,
-	Float,
-	PresentationControls,
-	Preload,
-	useTexture,
-} from "@react-three/drei";
+import { Decal, Float, Preload, useTexture } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
@@ -14,7 +8,7 @@ const Ball = (props) => {
 	const [decal] = useTexture([props.imgUrl]);
 
 	return (
-		<Float speed={0} rotationIntensity={0} floatIntensity={0}>
+		<Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
 			<ambientLight intensity={0.25} />
 			<directionalLight position={[0, 0, 0.05]} />
 			<mesh castShadow receiveShadow scale={2.75}>
@@ -40,22 +34,11 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
 	return (
 		<Canvas
-			frameloop="demand"
+			// frameloop="demand"
 			dpr={[1, 2]}
 			gl={{ preserveDrawingBuffer: true }}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				{/* <PresentationControls
-					enabled={true}
-					global={true}
-					cursor={true}
-					snap={true}
-					speed={5}
-					zoom={1}
-					polar={[Math.PI / 2, Math.PI / 2]}
-					azimuth={[-Infinity, Infinity]}
-					config={{ mass: 1, tension: 170, friction: 26 }}
-				/> */}
 				<Ball imgUrl={icon} />
 			</Suspense>
 
