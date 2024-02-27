@@ -227,3 +227,37 @@ body{
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+
+/* BG ANIMATION
+.bg-shape1{
+  border-radius: 100%;
+  position: relative;
+  animation: anime-1 10s infinite
+}
+
+.bg-shape2{
+  border-radius: 100%;
+  position: relative;
+  animation: anime-2 10s infinite
+}
+
+@keyframes anime-1 {
+  0%{left:0px;top:0px;}
+  25%{left:-100px;top:70px;}
+  50%{left:20px;top:150px;}
+  75%{left:50px;top:100px;}
+  100%{left:0px;top:0px;}
+}
+
+@keyframes anime-2 {
+  0%{left:0px;top:0px;}
+  25%{left:50px;top:10px;}
+  50%{left:100px;top:50px;}
+  75%{left:50px;top:100px;}
+  100%{left:0px;top:0px;}
+}
+
+.bg-blur{
+  filter: blur(90px);
+} */
