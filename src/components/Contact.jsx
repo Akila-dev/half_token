@@ -85,7 +85,7 @@ const Contact = () => {
 								href="mailto: Contact@halvingtoken.xyz"
 							>
 								<SiMaildotru className="text-[18px] inline-block .orange-text-gradient text-brand" />{" "}
-								Contact@halvingtoken.com
+								Contact@halvingeth.net
 							</a>
 						</div>
 						<div className="flex gap-3">
