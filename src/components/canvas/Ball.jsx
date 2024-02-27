@@ -45,7 +45,7 @@ const BallCanvas = ({ icon }) => {
 			gl={{ preserveDrawingBuffer: true }}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				<PresentationControls
+				{/* <PresentationControls
 					enabled={true}
 					global={true}
 					cursor={true}
@@ -55,7 +55,7 @@ const BallCanvas = ({ icon }) => {
 					// polar={[Math.PI / 2, Math.PI / 2]}
 					azimuth={[-Infinity, Infinity]}
 					config={{ mass: 1, tension: 10, friction: 26 }}
-				/>
+				/> */}
 				<Ball imgUrl={icon} />
 			</Suspense>
 
