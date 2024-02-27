@@ -40,9 +40,9 @@ const App = () => {
 	}, [section1InView, section2InView, section3InView, section4InView]);
 
 	return (
-		<div className="relative z-0 bg-primar">
+		<div className="relative z-0">
 			{/* <StarsCanvas /> */}
-			<div className="bg-hero-patter bg-cover bg-no-repeat bg-center">
+			<div className="bg-hero-pattern lg:bg-none bg-center bg-cover bg-no-repeat">
 				<Navbar activeProp={activeNav} />
 				<Hero />
 			</div>
