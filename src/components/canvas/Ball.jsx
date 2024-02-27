@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import {
 	Decal,
 	Float,
-	OrbitControls,
+	PresentationControls,
 	Preload,
 	useTexture,
 } from "@react-three/drei";
@@ -40,18 +40,21 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
 	return (
 		<Canvas
-			frameloop="demand"
+			// frameloop="demand"
 			dpr={[1, 2]}
 			gl={{ preserveDrawingBuffer: true }}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				<OrbitControls
-					// autoRotate
-					enableZoom={false}
-					maxPolarAngle={Math.PI / 2}
-					minPolarAngle={Math.PI / 2}
-					// maxPolarAngle={4 / Math.PI}
-					// minPolarAngle={4 / Math.PI}
+				<PresentationControls
+					enabled={true}
+					global={true}
+					cursor={true}
+					snap={true}
+					speed={5}
+					zoom={1}
+					// polar={[Math.PI / 2, Math.PI / 2]}
+					azimuth={[-Infinity, Infinity]}
+					config={{ mass: 1, tension: 10, friction: 26 }}
 				/>
 				<Ball imgUrl={icon} />
 			</Suspense>
