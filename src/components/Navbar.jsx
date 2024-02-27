@@ -86,7 +86,7 @@ const Navbar = ({ activeProp }) => {
 						className="button"
 					>
 						<FaEthereum />
-						Buy $HLVG
+						Buy $HALVING
 					</a>
 				</div>
 

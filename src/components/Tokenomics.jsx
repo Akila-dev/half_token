@@ -89,7 +89,9 @@ const About = () => {
 
 			<motion.div variants={textVariant()}>
 				<p className={`${styles.sectionSubText} text-center`}>Tokenomics</p>
-				<h2 className={`${styles.sectionHeadText} text-center`}>Get $HLVG</h2>
+				<h2 className={`${styles.sectionHeadText} text-center`}>
+					Get $HALVING
+				</h2>
 			</motion.div>
 
 			<div className="mt-10 md:mt-20 flex justify-center flex-wrap gap-10">
