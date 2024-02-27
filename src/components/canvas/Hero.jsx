@@ -54,13 +54,13 @@ const HeroCanvas = () => {
 					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 2}
 				/>
-				<ambientLight intensity={0.1} />
+				<ambientLight intensity={0.3} />
 				<directionalLight
 					position={[-5, 5, 5]}
 					castShadow
 					shadow-mapSize-width={1024}
 					shadow-mapSize-height={1024}
-					intensity={0.1}
+					intensity={0}
 				/>
 
 				<Hero />
