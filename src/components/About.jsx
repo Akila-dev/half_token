@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { EarthCanvas, CoinCanvas } from "./canvas";
+import { CoinCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
 import { ABOUT } from "../constants";

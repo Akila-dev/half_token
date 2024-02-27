@@ -1,18 +1,15 @@
 import React, { Suspense, useEffect, useState, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import {
 	Preload,
 	useGLTF,
 	useAnimations,
 	OrbitControls,
 } from "@react-three/drei";
-import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
 const Hero = () => {
-	// const hero = useLoader(GLTFLoader, "/models/kid.glb");
-
 	const group = useRef();
 	const { scene, animations } = useGLTF("/models/kid.glb");
 	const { actions, mixer } = useAnimations(animations, group);
@@ -41,7 +38,6 @@ const HeroCanvas = () => {
 	return (
 		<Canvas
 			shadows
-			// frameloop="demand"
 			dpr={[1, 2]}
 			gl={{ preserveDrawingBuffer: true }}
 			camera={{

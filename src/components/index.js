@@ -1,10 +1,4 @@
-import {
-	EarthCanvas,
-	CoinCanvas,
-	BallCanvas,
-	HeroCanvas,
-	StarsCanvas,
-} from "./canvas";
+import { CoinCanvas, BallCanvas, HeroCanvas, StarsCanvas } from "./canvas";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -26,7 +20,6 @@ export {
 	Team,
 	Contact,
 	CanvasLoader,
-	EarthCanvas,
 	CoinCanvas,
 	BallCanvas,
 	HeroCanvas,
