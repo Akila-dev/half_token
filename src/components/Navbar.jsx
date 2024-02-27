@@ -123,8 +123,8 @@ const Navbar = ({ activeProp }) => {
 										activeProp === index ? "text-[#f7931a]" : "text-secondary"
 									}`}
 									onClick={() => {
-										setToggle(!toggle);
 										setActive(nav.title);
+										setToggle(!toggle);
 									}}
 								>
 									<a href={`#${nav.id}`}>{nav.title}</a>
