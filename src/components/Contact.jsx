@@ -93,18 +93,21 @@ const Contact = () => {
 						<div className="flex gap-3">
 							<a
 								href="https://t.me/halving_eth"
+								target="_blank"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<FaTelegramPlane />
 							</a>
 							<a
 								href="https://x.com/halving_eth"
+								target="_blank"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<BsTwitterX />
 							</a>
 							<a
-								href="https://www.dextools.io"
+								href="https://www.dextools.io/app/en/ether/pair-explorer/0x4b0c83e5f5ae8d4454402348e3790967818dfbe8?t=1709116527318"
+								target="_blank"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<img
