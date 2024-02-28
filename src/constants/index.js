@@ -138,21 +138,39 @@ const roadmap = [
 	},
 ];
 
+// const team = [
+// 	{
+// 		name: "CryptoPioneer",
+// 		designation: "Marketing Lead",
+// 		image: teammate1,
+// 	},
+// 	{
+// 		name: "EthanBlockchain",
+// 		designation: "Technical Co-Lead",
+// 		image: teammate2,
+// 	},
+// 	{
+// 		name: "SatoshiVisionary",
+// 		designation: "innovation Co-Lead",
+// 		image: teammate3,
+// 	},
+// ];
+
 const team = [
 	{
-		name: "CryptoPioneer",
-		designation: "Marketing Lead",
+		name: "MickeB",
+		designation: "Co-Dev",
 		image: teammate1,
 	},
 	{
-		name: "EthanBlockchain",
-		designation: "Technical Co-Lead",
-		image: teammate2,
+		name: "HalvingMaster",
+		designation: "Co-Dev",
+		image: teammate3,
 	},
 	{
-		name: "SatoshiVisionary",
-		designation: "innovation Co-Lead",
-		image: teammate3,
+		name: "BTCMAXI",
+		designation: "Marketing",
+		image: teammate2,
 	},
 ];
 
