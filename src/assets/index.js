@@ -13,9 +13,9 @@ import dextools from "./Logos/dextools.png";
 import etherscan from "./Logos/etherscan.png";
 import git from "./Logos/github.png";
 
-import teammate1 from "./team/1.jpg";
-import teammate2 from "./team/2.jpg";
-import teammate3 from "./team/3.jpg";
+import teammate1 from "./team/1.png";
+import teammate2 from "./team/2.png";
+import teammate3 from "./team/3.png";
 
 export {
 	logo,

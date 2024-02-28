@@ -8,6 +8,8 @@ import { styles } from "../styles";
 import { SiMaildotru } from "react-icons/si";
 import { BsTwitterX } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
+import { FiCopy } from "react-icons/fi";
+
 import dextools from "../assets/dextools-sm.png";
 
 import { navLinks } from "../constants";
@@ -77,7 +79,7 @@ const Contact = () => {
 						</ul>
 					</div>
 
-					<div className="space-y-4">
+					<div className="space-y-5 w-full overflow-clip max-w-[300px]">
 						<h3 className="text-[18px] font-medium">Contact us</h3>
 						<div>
 							<a
@@ -90,13 +92,13 @@ const Contact = () => {
 						</div>
 						<div className="flex gap-3">
 							<a
-								href="https://t.me/HalvingPortal"
+								href="https://t.me/halving_eth"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<FaTelegramPlane />
 							</a>
 							<a
-								href="https://twitter.com/TokenHalving"
+								href="https://x.com/halving_eth"
 								className="rounded-md bg-tertiary w-[50px] h-[50px] flex items-center justify-center hover:bg-brand"
 							>
 								<BsTwitterX />
@@ -112,13 +114,23 @@ const Contact = () => {
 								/>
 							</a>
 						</div>
-						<div>
-							<a
-								className="text-secondary hover:text-brand"
-								href="mailto: Contact@halvingtoken.xyz"
+						<div className="w-full">
+							<button
+								className="text-secondary hover:text-brand text-wrap flex gap-2 w-full"
+								onClick={() => {
+									navigator.clipboard.writeText(
+										"0x545ee39b788d4d6C294A2BB5c85C5F7627c0Be88"
+									);
+									alert("Contract Address copied");
+								}}
 							>
-								CA:TBA
-							</a>
+								<span className="block overflow-hidden text-ellipsis text-nowrap">
+									CA: 0x545ee39b788d4d6C294A2BB5c85C5F7627c0Be88
+								</span>
+								<span className="text-xl w-[20px] block">
+									<FiCopy className="text-xl" />
+								</span>
+							</button>
 						</div>
 					</div>
 				</div>

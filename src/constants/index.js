@@ -156,41 +156,104 @@ const team = [
 	},
 ];
 
+// const ABOUT = [
+// 	{
+// 		title: "Section 1: Demystifying  Bitcoin Halving",
+// 		content: [
+// 			"Bitcoin Halving is a pivotal event that occurs every four years, cutting the reward for mining new Bitcoin blocks in half. This supply reduction often leads to notable market movements, with each halving eagerly awaited. The 2024 Halving promises to be a game-changer, and the HALVING Token signifies this key milestone.",
+// 		],
+// 		listHeader: "",
+// 		list: [],
+// 	},
+// 	{
+// 		title: "Section 2: Unveiling the HALVING Token",
+// 		content: [
+// 			"The HALVING Token embodies the spirit of the crypto halving events. Paying homage to these vital occurrences, it combines Ethereum’s adaptability with Bitcoin’s storied heritage.",
+// 		],
+// 		listHeader: "Key Features:",
+// 		list: [
+// 			"Fixed Supply: Capped at 21 million tokens, echoing Bitcoin’s iconic supply limit.",
+// 			"Deflationary Mechanism: Features an aggressive token burn strategy, aiming to gradually diminish supply and potentially boost value.",
+// 		],
+// 	},
+// 	{
+// 		title: "Section 3: Advantages of Choosing HALVING Token?",
+// 		content: [
+// 			"TThe HALVING Token is more than a digital asset; it's a testament to your involvement in a landmark crypto event.",
+// 		],
+// 		listHeader: "",
+// 		list: [
+// 			"Celebrate the Halving Phenomenon: With the crypto community abuzz for the 2024 Halving, HALVING offers an exclusive opportunity to engage with this anticipation.",
+// 			"A Beacon of Scarcity and Worth: Embracing the fundamental tenets of cryptocurrency economics, the deflationary aspect of HALVING positions it as a valuable asset in the digital currency evolution.",
+// 		],
+// 	},
+// 	{
+// 		title: "Section 4: Engaging with HALVING Token",
+// 		content: [
+// 			"Embarking on the HALVING journey is simple. Secure HALVING Tokens via a decentralized exchange and join a community that's eagerly anticipating the next major cryptocurrency surge.",
+// 		],
+// 		listHeader: "",
+// 		list: [],
+// 	},
+// 	{
+// 		title: "Conclusion",
+// 		content: [
+// 			"The 2024 Bitcoin Halving is poised to be a monumental event in the cryptocurrency realm, and the HALVING Token offers you a chance to be part of this thrilling epoch. As the countdown to this historic occasion continues, HALVING stands as a tribute to the innovation and enthusiasm of the crypto community.",
+// 		],
+// 		listHeader: "",
+// 		list: [],
+// 	},
+// ];
+
 const ABOUT = [
 	{
-		title: "Section 1: Demystifying  Bitcoin Halving",
+		title: "Section 1: Understanding Bitcoin Halving",
 		content: [
-			"Bitcoin Halving is a pivotal event that occurs every four years, cutting the reward for mining new Bitcoin blocks in half. This supply reduction often leads to notable market movements, with each halving eagerly awaited. The 2024 Halving promises to be a game-changer, and the HALVING Token signifies this key milestone.",
+			"The Bitcoin Halving is a landmark event occurring every four years that halves the reward for mining new Bitcoin blocks. This reduction in supply has historically triggered significant market movements, making each halving a highly anticipated event. The 2024 Halving is set to be a game-changer, and HLVG Token is here to mark this milestone.",
 		],
 		listHeader: "",
 		list: [],
 	},
 	{
-		title: "Section 2: Unveiling the HALVING Token",
+		title: "Section 2: Introducing the HALVING Token",
 		content: [
-			"The HALVING Token embodies the spirit of the crypto halving events. Paying homage to these vital occurrences, it combines Ethereum’s adaptability with Bitcoin’s storied heritage.",
+			"Section 2: Introducing the HALVING Token.",
+			"HALVING Token symbolizes the essence of the crypto halving phenomenon. As a tribute to these crucial events, it aligns with Ethereum’s versatility and Bitcoin’s legacy.",
 		],
 		listHeader: "Key Features:",
 		list: [
-			"Fixed Supply: Capped at 21 million tokens, echoing Bitcoin’s iconic supply limit.",
-			"Deflationary Mechanism: Features an aggressive token burn strategy, aiming to gradually diminish supply and potentially boost value.",
+			"Fixed Supply: A total of 21 million tokens, mirroring the iconic Bitcoin supply cap.",
+			"Deflationary Design: Incorporates a rigorous burning mechanism to reduce token supply over time, potentially enhancing its value.",
 		],
 	},
 	{
-		title: "Section 3: Advantages of Choosing HALVING Token?",
+		title: "Section 3: How Does HALVING Token Work?",
 		content: [
-			"TThe HALVING Token is more than a digital asset; it's a testament to your involvement in a landmark crypto event.",
+			"The HALVING Token is more than a digital asset; it's a testament to your involvement in a landmark crypto event.",
 		],
 		listHeader: "",
 		list: [
-			"Celebrate the Halving Phenomenon: With the crypto community abuzz for the 2024 Halving, HALVING offers an exclusive opportunity to engage with this anticipation.",
-			"A Beacon of Scarcity and Worth: Embracing the fundamental tenets of cryptocurrency economics, the deflationary aspect of HALVING positions it as a valuable asset in the digital currency evolution.",
+			"Transaction Burns: For each buy transaction, 1% of HALVING tokens are burnt, and for each sell transaction, 2% are burnt. These tokens are sent to a dead address, permanently reducing the total supply and mimicking the scarcity effect of Bitcoin halvings.",
+			"Auto Liquidity Contribution: Each transaction contributes 1/2% of the tokens to the liquidity pool automatically. This mechanism helps in maintaining liquidity and price stability.",
+			"Marketing Allocation: An additional 1/2% of each transaction is allocated for marketing purposes, supporting the growth and outreach of HALVING.",
+			"Pre-Halving Lockup and Burn: A significant portion, 20% of HALVING tokens, will be locked up until the Bitcoin halving event. Upon the halving date, these tokens will be withdrawn and burnt, emphasizing the scarcity and value proposition of the HALVING Token in alignment with Bitcoin’s halving cycle.",
 		],
 	},
 	{
-		title: "Section 4: Engaging with HALVING Token",
+		title: "Section 4: Why Choose HALVING Token?",
 		content: [
-			"Embarking on the HALVING journey is simple. Secure HALVING Tokens via a decentralized exchange and join a community that's eagerly anticipating the next major cryptocurrency surge.",
+			"HALVING Token isn’t just a digital asset; it’s a symbol of your participation in a key crypto event.",
+		],
+		listHeader: "",
+		list: [
+			"Embrace the Halving Excitement: As the crypto world buzzes with anticipation for the 2024 Halving, HALVING offers a unique way to be part of this excitement.",
+			"A Symbol of Scarcity and Value: Reflecting the core principles of crypto economics, HALVING’s deflationary nature positions it as a potentially valuable asset in the evolving digital currency landscape.",
+		],
+	},
+	{
+		title: "Section 5: Getting Started with HALVING Token",
+		content: [
+			"Joining the HALVING movement is straightforward. Acquire HALVING Tokens through a decentralized exchange, and become part of a community eagerly awaiting the next big wave in cryptocurrency.",
 		],
 		listHeader: "",
 		list: [],
@@ -198,7 +261,7 @@ const ABOUT = [
 	{
 		title: "Conclusion",
 		content: [
-			"The 2024 Bitcoin Halving is poised to be a monumental event in the cryptocurrency realm, and the HALVING Token offers you a chance to be part of this thrilling epoch. As the countdown to this historic occasion continues, HALVING stands as a tribute to the innovation and enthusiasm of the crypto community.",
+			"The 2024 Bitcoin Halving is set to be a landmark event in the cryptocurrency world, and HALVING Token is your opportunity to be part of this exciting journey. As we count down to this historic moment, HLVG stands as a testament to the innovation and spirit of the crypto community.",
 		],
 		listHeader: "",
 		list: [],
